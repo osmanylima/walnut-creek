@@ -1,0 +1,827 @@
+video.bg_video {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+
+  @include media-breakpoint-down(md) {
+    height: auto;
+  }
+}
+
+.bg-gradient {
+  position: relative;
+  z-index: 0;
+  margin-bottom: 6rem;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 3rem;
+  }
+
+  &::after {
+    content: "";
+    background: linear-gradient(-45deg, #06b9a7, #407163);
+    width: 115%;
+    height: 115%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-6.5%, -6.5%);
+    z-index: 0;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}
+
+.bg-pattern {
+  padding: 60px 0;
+  background: url(https://prosthodonticsdentalimplants.com/novo/wp-content/themes/walnut-creek/dist/images/bg-green.jpg) no-repeat center;
+  background-size: cover;
+
+  h2.title-page {
+    margin-bottom: 50px;
+    color: $white;
+
+    &::after {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  p {
+    color: $white;
+    margin-bottom: 40px;
+  }
+
+  img {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.list-services {
+  background-color: $white;
+  border: 30px solid $white;
+  z-index: 1;
+  position: relative;
+
+  article {
+    background-color: $white;
+    border-left: 1px solid $c-secondary;
+    border-top: 1px solid $c-secondary;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    z-index: 1;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    h6 {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: $c-secondary;
+      margin-bottom: 0;
+      line-height: 1.4;
+    }
+
+    a {
+      display: block;
+      height: 100%;
+      padding: 20px;
+
+      @extend .transition;
+
+      &:hover {
+        background: $c-primary;
+
+        h6 {
+          color: $white;
+        }
+
+        img {
+          filter: brightness(10);
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      &:nth-child(-n+3) {
+        border-top: none;
+      }
+
+      &:nth-child(3n+1) {
+        border-left: none;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      &:nth-child(-n+2) {
+        border-top: none;
+      }
+
+      &:nth-child(2n+1) {
+        border-left: none;
+      }
+
+      &:nth-last-child(-2n+2) {
+        border-bottom: 1px solid $c-secondary;
+      }
+
+      &:nth-last-child(-1n+1) {
+        border-right: 1px solid $c-secondary;
+      }
+    }
+  }
+}
+
+.list-mission {
+  p {
+    position: relative;
+    color: $c-gray-dark;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 100px;
+
+    &::before {
+      content: "\f26b";
+      font-family: "bootstrap-icons", sans-serif !important;
+      position: absolute;
+      top: -60px;
+      font-size: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: $c-secondary;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+p iframe {
+  display: block;
+  width: 100%;
+  height: 400px;
+  box-shadow: 0 0 0 5px $white;
+}
+
+.video-technology {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.slick-technology {
+  @include media-breakpoint-down(sm) {
+    &::before,
+    &::after {
+      content: "";
+      width: 50px;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+    }
+
+    &::before {
+      background: linear-gradient(90deg, #f5f5f5, transparent);
+      left: 0;
+    }
+
+    &::after {
+      background: linear-gradient(-90deg, #f5f5f5, transparent);
+      right: 0;
+    }
+  }
+
+  .slick-list {
+    padding: 50px 120px 50px 80px;
+
+    @include media-breakpoint-down(sm) {
+      padding: 35px 40px 30px 90px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding: 35px 20px 30px 60px;
+    }
+  }
+
+  .slick-slide {
+    margin-right: 150px;
+    filter: grayscale(1);
+
+    @extend .transition;
+
+    @include media-breakpoint-down(md) {
+      margin-right: 100px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-right: 80px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-right: 60px;
+    }
+
+    picture {
+      background: url(https://prosthodonticsdentalimplants.com/novo/wp-content/themes/walnut-creek/dist/images/bg-green.jpg);
+      margin-bottom: 10px;
+      position: relative;
+      padding-bottom: 56.25%;
+      overflow: hidden;
+      max-width: 100%;
+      height: auto;
+
+      iframe,
+      object,
+      embed {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 92%;
+        height: 90%;
+        transform: translate(-50%, -50%);
+      }
+
+      @include media-breakpoint-down(md) {
+        padding: 20px;
+      }
+    }
+
+    h3 {
+      font-size: 30px;
+      line-height: 1;
+      text-align: center;
+
+      @include media-breakpoint-down(md) {
+        font-size: 22px;
+      }
+    }
+
+    &.slick-active {
+      filter: grayscale(0);
+      transform: scale(1.2);
+    }
+  }
+
+  button {
+    cursor: pointer;
+    z-index: 10;
+    border: none;
+    outline: none;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+
+    @include media-breakpoint-down(md) {
+      top: 45%;
+    }
+
+    &.slick-prev {
+      left: -100px;
+
+      @include media-breakpoint-down(sm) {
+        left: 0;
+      }
+    }
+
+    &.slick-next {
+      right: 120px;
+
+      @include media-breakpoint-down(sm) {
+        right: 0;
+      }
+    }
+
+    svg {
+      width: 50px;
+      height: 50px;
+
+      path {
+        fill: $c-primary;
+      }
+    }
+  }
+}
+
+.slick-team {
+  &::before,
+  &::after {
+    content: "";
+    width: 200px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+
+    @include media-breakpoint-down(md) {
+      width: 100px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 50px;
+    }
+  }
+
+  &::before {
+    background: linear-gradient(90deg, #f5f5f5, transparent);
+    left: 0;
+  }
+
+  &::after {
+    background: linear-gradient(-90deg, #f5f5f5, transparent);
+    right: 0;
+  }
+
+  .slick-list {
+    padding: 35px 300px !important;
+
+    @include media-breakpoint-down(lg) {
+      padding: 35px 200px !important;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 60px 150px !important;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 70px 100px !important;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding: 70px 50px !important;
+    }
+  }
+
+  .slick-slide {
+    margin-right: 100px;
+    margin-left: 100px;
+    filter: grayscale(1);
+
+    @extend .transition;
+
+    @include media-breakpoint-down(md) {
+      margin-right: 60px;
+      margin-left: 60px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-right: 40px;
+      margin-left: 40px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+
+    &.slick-active {
+      filter: grayscale(0);
+      transform: scale(1.2);
+    }
+
+    .description p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  button {
+    cursor: pointer;
+    z-index: 10;
+    border: none;
+    outline: none;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+
+    &.slick-prev {
+      left: 0;
+    }
+
+    &.slick-next {
+      right: 0;
+    }
+
+    svg {
+      width: 50px;
+      height: 50px;
+
+      path {
+        fill: $c-primary;
+      }
+    }
+  }
+}
+
+#partients-reviews {
+  background: $white url(https://prosthodonticsdentalimplants.com/novo/wp-content/themes/walnut-creek/dist/images/bg-patients-reviews.jpg) no-repeat -100px center;
+  padding: 100px 0 200px;
+  background-size: cover;
+  position: relative;
+
+  .partients {
+    position: relative;
+    border: 30px solid transparent;
+    border-image: url(https://prosthodonticsdentalimplants.com/novo/wp-content/themes/walnut-creek/dist/images/bg-green.jpg) 30 round;
+    background-color: #f6f6f6;
+
+    &__slick {
+      position: relative;
+      padding: 40px 50px;
+
+      button {
+        cursor: pointer;
+        z-index: 10;
+        border: none;
+        outline: none;
+        background: transparent;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0;
+
+        &.slick-prev {
+          left: -100px;
+        }
+
+        &.slick-next {
+          right: -100px;
+        }
+
+        svg {
+          width: 50px;
+          height: 50px;
+
+          path {
+            fill: $c-primary;
+          }
+        }
+      }
+
+      &::before {
+        content: "“";
+        font-size: 150px;
+        color: $c-primary-dark;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: -15px;
+        z-index: 5;
+        font-family: sans-serif;
+        line-height: 1;
+      }
+
+      &::after {
+        content: "“";
+        font-size: 150px;
+        color: $c-primary-dark;
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: -15px;
+        z-index: 5;
+        font-family: sans-serif;
+        line-height: 1;
+        transform: rotate(180deg);
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      &__slick button {
+        &.slick-prev {
+          left: -85px;
+        }
+
+        &.slick-next {
+          right: -70px;
+        }
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      border: 20px solid transparent;
+      border-image: url(https://prosthodonticsdentalimplants.com/novo/wp-content/themes/walnut-creek/dist/images/bg-green.jpg) 20 round;
+
+      &__slick button {
+        &.slick-prev {
+          left: 0;
+        }
+
+        &.slick-next {
+          right: 0;
+        }
+
+        svg {
+          width: 35px;
+          height: 60px;
+        }
+      }
+    }
+
+    &__item {
+      position: relative;
+    }
+
+    p {
+      color: $c-primary;
+    }
+
+    h6 {
+      color: $c-primary-dark;
+      text-align: right;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1;
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      width: 50px;
+      height: 40px;
+      display: block;
+      position: absolute;
+      border-left: 50px solid #f6f6f6;
+      border-top: 0 solid transparent;
+      border-right: 0 solid transparent;
+      border-bottom: 40px solid transparent;
+      bottom: -40px;
+      left: 80px;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      width: 130px;
+      height: 100px;
+      display: block;
+      position: absolute;
+      border-left: 130px solid #397c64;
+      border-top: 0 solid transparent;
+      border-right: 0 solid transparent;
+      border-bottom: 100px solid transparent;
+      bottom: -100px;
+      left: 50px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 59px;
+    background: url(https://prosthodonticsdentalimplants.com/novo/wp-content/themes/walnut-creek/dist/images/pattern-bottom-green.png) repeat-x left top;
+  }
+
+  @include media-breakpoint-down(sm) {
+    background-position: 50% center;
+  }
+}
+
+.list_doctors .list-doctors {
+  .doctors-item {
+    display: inline-grid;
+
+    @include media-breakpoint-up(sm) {
+      text-align: right;
+      padding-right: 10px !important;
+    }
+
+    @include media-breakpoint-only(md) {
+      margin-left: 8.33333%;
+    }
+  }
+
+  &:nth-child(2n+2) {
+    @include media-breakpoint-up(sm) {
+      > p {
+        text-align: right;
+      }
+
+      .doctors-item {
+        order: 2;
+
+        > div {
+          order: 2;
+          text-align: left;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      .description {
+        text-align: right;
+      }
+    }
+  }
+
+  picture {
+    flex-grow: 1;
+    max-width: 100%;
+
+    @include media-breakpoint-only(md) {
+      flex-grow: initial;
+    }
+  }
+
+  @include media-breakpoint-only(lg) {
+    h3 {
+      font-size: 40px;
+      line-height: 40px;
+      letter-spacing: -2px;
+    }
+  }
+}
+
+#about-us {
+  position: relative;
+
+  .list-doctors {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 50px;
+    }
+
+    picture {
+      margin-bottom: 15px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .description {
+      p {
+        margin-bottom: 0;
+        font-style: italic;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      &:first-child {
+        picture {
+          order: 1;
+        }
+
+        .description {
+          order: 0;
+          text-align: right;
+          padding-right: 15px !important;
+        }
+      }
+
+      &:last-child {
+        picture {
+          order: 0;
+        }
+
+        .description {
+          order: 0;
+          padding-left: 15px !important;
+        }
+      }
+    }
+  }
+}
+
+body.home {
+  #about-us {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -59px;
+      left: 0;
+      width: 100%;
+      height: 59px;
+      background: url(https://prosthodonticsdentalimplants.com/novo/wp-content/themes/walnut-creek/dist/images/pattern-top-white.png) repeat-x left top;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -59px;
+      left: 0;
+      width: 100%;
+      height: 59px;
+      background: url(https://prosthodonticsdentalimplants.com/novo/wp-content/themes/walnut-creek/dist/images/pattern-bottom-white.png) repeat-x left top;
+    }
+  }
+
+  #latest-technology {
+    background-color: $c-gray-light;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 59px;
+      background: url(https://prosthodonticsdentalimplants.com/novo/wp-content/themes/walnut-creek/dist/images/pattern-top-green.png) repeat-x left top;
+    }
+
+    .p-fixed {
+      position: absolute;
+      z-index: 1000;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-shadow: 0 0 50px rgba($black, 0.8);
+
+      .title-page {
+        margin-bottom: 0;
+        color: $white;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      h4 {
+        color: $white;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+#partners {
+  background-color: $c-gray;
+  padding: 100px 0;
+
+  @include media-breakpoint-up(xl) {
+    .slick-track {
+      width: 100% !important;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .slick-slide {
+    padding-right: 20px;
+
+    @include media-breakpoint-down(sm) {
+      padding-right: 30px;
+    }
+  }
+}
+
+#our-services {
+  background-color: $c-primary;
+  position: relative;
+  padding-bottom: 80px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -59px;
+    left: 0;
+    width: 100%;
+    height: 59px;
+    background: url(https://prosthodonticsdentalimplants.com/novo/wp-content/themes/walnut-creek/dist/images/pattern-top-green.png) repeat-x left top;
+  }
+
+  h2.title-page {
+    color: $white;
+  }
+}
+
+.bottom-green {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 59px;
+    background: url(https://prosthodonticsdentalimplants.com/novo/wp-content/themes/walnut-creek/dist/images/pattern-top-green.png) repeat-x left top;
+  }
+}

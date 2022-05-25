@@ -1,0 +1,28 @@
+.template-services {
+  .font-2x img {
+    background: url(https://prosthodonticsdentalimplants.com/novo/wp-content/themes/walnut-creek/dist/images/bg-green.jpg);
+    padding: 30px;
+    display: block;
+    width: 100%;
+  }
+
+  h2 {
+    position: relative;
+    display: block;
+    text-align: center;
+    color: $c-primary;
+
+    &::after {
+      content: "";
+      width: 70%;
+      max-width: 150px;
+      height: 8px;
+      background-color: rgba($c-secondary-light, 0.5);
+      display: block;
+      position: relative;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 20px);
+    }
+  }
+}

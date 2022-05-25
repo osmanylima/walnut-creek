@@ -1,0 +1,29 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans:wght@400;600;700;900&display=swap");
+
+$font: "Open Sans", sans-serif;
+$lato: "Lato", sans-serif;
+
+$c-primary: #337363;
+$c-primary-dark: #283f39;
+$c-secondary: #06b9a7;
+$c-secondary-light: #b4d0c7;
+$c-cta: #82b1a7;
+$c-black: #000;
+$c-gray: #b3b3b3;
+$c-gray-dark: #373636;
+$c-gray-light: #8b8b89;
+
+.transition {
+  transition: 0.3s ease all;
+}
+
+div.bg-primary {
+  background: $c-primary !important;
+}
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;

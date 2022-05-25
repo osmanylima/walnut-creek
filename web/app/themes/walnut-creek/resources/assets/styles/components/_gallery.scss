@@ -1,0 +1,11 @@
+.final-tiles-gallery {
+  margin: 0 auto;
+
+  @include media-breakpoint-down(sm) {
+    width: 100% !important;
+  }
+
+  .loading-bar {
+    display: none;
+  }
+}

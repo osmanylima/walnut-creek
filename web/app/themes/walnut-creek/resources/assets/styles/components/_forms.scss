@@ -1,0 +1,223 @@
+/** Search form */
+.search-form {
+  @extend .form-inline;
+}
+
+.search-form label {
+  @extend .form-group;
+
+  font-weight: normal;
+}
+
+.search-form .search-field {
+  @extend .form-control;
+}
+
+.search-form .search-submit {
+  @extend .btn;
+  @extend .btn-secondary;
+}
+
+div.wpcf7 {
+  padding-bottom: 30px;
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    outline: 0;
+    font-family: $font;
+    font-size: 16px;
+    font-weight: 500;
+    color: $c-primary;
+    line-height: 2;
+    padding: 10px;
+    background-color: $white;
+    border-radius: 0;
+    border: 1px solid $c-gray-light;
+
+    ::-webkit-input-placeholder { color: $c-primary; }
+    ::-moz-placeholder { color: $c-primary; }
+    :-ms-input-placeholder { color: $c-primary; }
+
+    &.wpcf7-not-valid {
+      background: rgba(239, 77, 128, 0.02);
+
+      ::placeholder {
+        color: red;
+        opacity: 1;
+      }
+
+      ::-webkit-input-placeholder { color: $c-primary; }
+      ::-moz-placeholder { color: $c-primary; }
+      :-ms-input-placeholder { color: $c-primary; }
+    }
+  }
+
+  textarea {
+    min-height: 120px;
+    max-height: 120px;
+    height: 120px;
+
+    @include media-breakpoint-down(sm) {
+      min-height: 150px;
+      max-height: 150px;
+      height: 150px;
+    }
+  }
+
+  input:focus + .control-label,
+  textarea:focus + .control-label {
+    background-color: purple;
+    color: red;
+  }
+
+  [type="submit"] {
+    color: $white;
+    background: $c-secondary;
+    padding: 10px;
+    font-family: $font;
+    font-weight: 700;
+    cursor: pointer;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+    border-color: $c-secondary;
+  }
+
+  .col-md-6 [type="submit"] {
+    max-width: initial;
+  }
+
+  .controls > input {
+    float: right;
+  }
+
+  p {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  h6 {
+    margin-top: 20px;
+  }
+
+  span {
+    &.wpcf7-not-valid-tip {
+      font-size: 14px;
+      font-weight: normal;
+      color: #d40808;
+      clear: both;
+      display: none;
+    }
+
+    &.wpcf7-list-item {
+      //width: 40%;
+      float: left;
+      margin: 0;
+      padding-left: 20px;
+      border-radius: 10px;
+      text-align: left;
+
+      &.last { margin-left: 2%; }
+
+      &-label {
+        font-size: 16px;
+        font-weight: 700;
+        color: red;
+
+        a {
+          color: #f16650;
+          text-decoration: underline;
+        }
+      }
+
+      @include media-breakpoint-down(xs) {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 0 !important;
+      }
+    }
+  }
+
+  .test-input {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  label {
+    width: 100%;
+    margin-bottom: 25px;
+
+    &.has-label {
+      width: calc(100% - 20px);
+      position: absolute;
+      top: 12px;
+      left: 10px;
+      text-align: left;
+      pointer-events: none;
+      transition: top 0.2s;
+      color: rgba(106, 106, 106, 0.6);
+      font-size: 14px;
+      text-transform: uppercase;
+
+      &.has-value {
+        top: -20px;
+        font-size: 13px;
+        color: #000;
+      }
+    }
+  }
+
+  .ajax-loader {
+    position: absolute;
+    left: 41px;
+    background-color: $white;
+    padding: 21px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 3px solid $c-primary;
+    max-width: initial;
+    width: 175px;
+    border-radius: 4px;
+  }
+
+  .wpcf7-response-output {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-family: $font;
+    background-color: red;
+    border-color: red !important;
+    color: $white;
+    font-weight: 700;
+    font-size: 17px;
+    z-index: 99999;
+
+    &.wpcf7-validation-errors {
+      background-color: #f7e700;
+      border-color: #f7e700 !important;
+      color: #000;
+    }
+
+    &.wpcf7-mail-sent-ok {
+      background-color: #398f14;
+      border-color: #398f14 !important;
+    }
+  }
+
+  .wpcf7-spinner {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-90px, -50%);
+  }
+}
